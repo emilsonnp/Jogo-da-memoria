@@ -15,7 +15,6 @@ const emojis = [
     "🐶",
     "🐮",
     "🐮",
-
 ];
 let openCard = [];
 
@@ -27,5 +26,17 @@ for(let i=0; i < emojis.length; i++)
     ("div");
     box.className = "item";
     box.innerHTML = shuffleEmojis[i];
+    box.onclick = handleClick;
     document.querySelector(".game").appendChild(box);
+}
+
+function handleClick() {
+   if(openCard.length < 2) {
+    this.classList.add("boxOpen");
+    openCard.push(this);
+   } 
+
+   if(openCard.length ===2) {
+    setTimeout(checkMatch, 500);
+   }
 }
