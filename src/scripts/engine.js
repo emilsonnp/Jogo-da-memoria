@@ -57,6 +57,6 @@ function checkMatch() {
     openCard = [];
 
     if(document.querySelectorAll(".boxMatch").length === emojis.length) {
-        alert("Você venceu !");
+        alert("Você venceu 👏 !");
     }
 }
