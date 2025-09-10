@@ -47,12 +47,11 @@ h2 {
     background-color: #262809;
 }
 .game {
-    border: 1px solid red;
-    width: 450px;
-    height: 450px;
+    width: 430px;
+    height: 430px;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
     transform-style: preserve-3d;
     perspective: 500px;
 }
@@ -75,7 +74,7 @@ h2 {
     position: absolute;
     inset: 0;
     background: #404040;
-    opacity: 0.85;
+    /* opacity: 0.85; */
     transition: 0.45s;
     transform: rotateY(0deg);
     backface-visibility: hidden;
@@ -84,7 +83,8 @@ h2 {
     transform: rotateY(0deg);
 }
 
-.boxOpen::after {
+.boxOpen::after,
+.boxMatch::after {
     transform: rotateY(180deg);
 }
 
